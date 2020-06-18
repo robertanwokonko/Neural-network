@@ -6,16 +6,13 @@ import pandas as pd
 
 # x is a numpy array of lists. 
 # Each list has the number of study and sleep hours per student.
-
-# y is a numpy array of lists. 
-# Each list has the score for each student based on the study and sleep hour
+# I want to predict yhat - this is the potential test scores of the students based
+# on their sleep and study hours.
 
 x = np.array(([3,5], [5,1],[10,2]), dtype = float)
-# y = np.array(([75],[82],[93]), dtype = float)
 
-# Normalizing x and y values. Using a maximum score of 100.
+# Normalizing x
 x = x/np.amax(x, axis = 0)
-# y = y/100
 
 
 class NeuralNet(object):
